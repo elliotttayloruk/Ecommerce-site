@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ</title>
+
+    <style>
+
+        #popImg{
+            float: left;
+            width: 550px;
+            height: 450px;
+            border-style: solid;
+            border-color: black;
+            background-color: rgba(0, 0, 0, .3);
+            border-radius: 20px;
+
+        }
+
+
+        .itemPopup{
+            width: 60%;
+            background: lightgrey;
+            border-radius: 50px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.1);
+            visibility: hidden;
+            padding: 0 30px 30px;
+            transition: transform 0.4s, top 0.4s;
+            font-size: 25px;
+        }
+
+        .closePopup{
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0.1);
+        }
+
+        .openPopup{
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .addToCart{
+            margin:auto;
+            display:block;
+            padding:0.5em 1em 0.5em 1em;
+            border-radius:100px;
+            position:absolute;
+            bottom:10px;
+            cursor:pointer;
+            height:40px;
+            width:75px;
+            border-width: 0.5px;
+            overflow:hidden;
+            z-index:1;
+            background: ghostwhite;
+        }
+
+        .addToCart:hover{
+            background:mediumpurple;
+            transform:scale(1.1);
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #ffefba, #ffffff);
+        }
+
+
+        .navbar {
+            width: 100%;
+            background-color: #555;
+            overflow: auto;
+        }
+
+        .navbar a {
+            float: left;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            width: 12.5%;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            /*changes the colour of the navbar buttons when you hover over them*/
+            background-color: #000;
+        }
+
+        .navbar a.active {
+            /*Highlights the page you are currently on in the navbar*/
+            background-color: mediumpurple;
+        }
+
+        footer{
+            background-color: rgba(0,0,0,.3);
+        }
+
+        h2 {
+            text-indent: 75px;
+        }
+
+        h3 {
+            text-indent: 125px;
+        }
+
+        p {
+            text-indent: 135px;
+        }
+
+        .greenbutton {
+            cursor: pointer;
+            /*background: lightgreen;*/
+            border-width: 0.5px;
+
+        }
+
+        .greenbutton:hover {
+            background: lightgreen;
+        }
+
+        .redbutton {
+            cursor: pointer;
+            border-width: 0.5px;
+        }
+
+        .redbutton:hover {
+            background: lightcoral;
+        }
+
+        .accordion {
+            cursor: pointer;
+            border: none;
+            background: none;
+            text-align: left;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        .accordion:hover {
+            transform: scale(1.05);
+        }
+
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+    </style>
+
+</head>
+
+<body background="images/backg.jpeg">
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="screens.html">Protectors</a>
+    <a href="about.html">About</a>
+    <a class="active" href="FAQ.html">FAQ</a>
+    <a href="login.html">Login</a>
+    <a href="billing.html">Pay here</a>
+    <a href="basket.html">Basket</a>
+</div><br>
+
+<div class="itemPopup" id="itemPopup">
+    <img id="popImg"  src="" alt="Bing Chilling" width="325" height="300">
+    <button onclick="closePopup()" class="addToCart">Back</button>
+</div>
+
+<h1 style="text-align: center;">Frequently Asked Questions</h1>
+
+<button class="accordion"><h2>Q. How do I place an order on the website?</h2></button>
+<div class="panel">
+    <h3>A: You can create an account or checkout as a guest. Creating an account is recommended.</h3>
+    <p>Was this helpful?</p>
+    <div class="nameo">
+        <p><button onclick="itemPopup('Yes')" id="yes" class="greenbutton">Yes</button>&emsp;<button onclick="itemPopup('No')" id="no" class="redbutton">No</button></p>
+    </div>
+
+
+</div>
+
+<br>
+
+<button class="accordion"><h2>Q: What Payment Methods do you accept?</h2></button>
+<div class="panel">
+    <h3>A: We accept every single digital payment method.</h3>
+    <p><button onclick="itemPopup('Yes')" id="yes2" class="greenbutton">Yes</button>&emsp;<button onclick="itemPopup('No')" id="no2" class="redbutton">No</button></p>
+
+</div>
+
+</div>
+
+<br>
+
+<button class="accordion"><h2>Q: I want to change my order. How can I do that?</h2></button>
+<div class="panel">
+    <h3>A: Look for your order receipt in your mail, you will find a button at the bottom of the page to change your order.</h3>
+    <p><button onclick="itemPopup('Yes')" id="yes3" class="greenbutton">Yes</button>&emsp;<button onclick="itemPopup('No')" id="no3" class="redbutton">No</button></p>
+
+</div>
+
+<br>
+
+<button class="accordion"><h2>Q: Do you ship internationally?</h2></button>
+<div class="panel">
+    <h3>A: We ship to every country in the world.</h3>
+    <p><button onclick="itemPopup('Yes')" id="yes4" class="greenbutton">Yes</button>&emsp;<button onclick="itemPopup('No')" id="no4" class="redbutton">No</button></p>
+
+</div>
+
+<br>
+
+<button class="accordion"><h2>Q: When will my order ship?</h2></button>
+<div class="panel">
+    <h3>A: Every order is processed and shipped within 24 hours after your payment has been confirmed.</h3>
+    <p><button onclick="itemPopup('Yes')" id="yes5" class="greenbutton">Yes</button>&emsp;<button onclick="itemPopup('No')" id="no5" class="redbutton">No</button></p>
+
+</div>
+
+<br>
+
+<button class="accordion"><h2>Q: I haven't received my order yet.</h2></button>
+<div class="panel">
+    <h3>A: Please send us an email if more than 10 days have passed since we shipped your product.</h3>
+    <p><button onclick="itemPopup('Yes')" id="yes6" class="greenbutton">Yes</button>&emsp;<button onclick="itemPopup('No')" id="no6" class="redbutton">No</button></p>
+</div>
+
+<br>
+
+<button class="accordion"><h2>Q: What is your refund policy?</h2></button>
+<div class="panel">
+    <h3>A: We accept refunds 7 days after you have received your product.</h3>
+    <p><button onclick="itemPopup('Yes')" id="yes7" class="greenbutton">Yes</button>&emsp;<button onclick="itemPopup('No')" id="no7" class="redbutton">No</button></p>
+</div>
+
+<br>
+
+<button class="accordion"><h2>Q: My item arrived broken/is faulty. What can I do?</h2></button>
+<div class="panel">
+    <h3>A: Please email customer support with the details of the incident. We will send you a new case free of charge.</h3>
+    <p><button onclick="itemPopup('Yes')" id="yes8" class="greenbutton">Yes</button>&emsp;<button onclick="itemPopup('No')" id="no8" class="redbutton">No</button></p>
+</div>
+
+<br>
+
+<button class="accordion"><h2>Q: How long am I expected to wait for my order?</h2></button>
+<div class="panel">
+    <h3>A: Orders usually arrive in 7 days at the latest.</h3>
+    <p><button onclick="itemPopup('Yes')" id="yes9" class="greenbutton">Yes</button>&emsp;<button onclick="itemPopup('No')" id="no9" class="redbutton">No</button></p>
+</div>
+
+<br>
+
+<button class="accordion"><h2>Q: I haven't received an email back from you.</h2></button>
+<div class="panel">
+    <h3>A: Due to a high amount of emails we receive, a response from us may take 24 to 48 hours.</h3>
+    <p><button onclick="itemPopup('Yes')" id="yes10" class="greenbutton">Yes</button>&emsp;<button onclick="itemPopup('No')" id="no10" class="redbutton">No</button></p>
+</div>
+
+<br>
+
+<script>
+    let pop = document.getElementById("itemPopup");
+
+    function itemPopup(buttonID){
+
+        if(buttonID === "Yes"){
+            document.getElementById("popImg").src = "../images/Ye.png";
+        }else if(buttonID === "No"){
+            document.getElementById("popImg").src = "../images/No.png";
+        }
+
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+        pop.classList.add("openPopup")
+    }
+
+    function closePopup(){
+        pop.classList.remove("openPopup")
+    }
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+
+</script>
+
+</body>
+<br><br>
+<footer>
+    <table width="100%">
+        <tr>
+            <td align="left" width="25%">
+                <a href="https://www.instagram.com/" target="blank">
+                    <img src="./images/instagram.png" width="15%" height="10%">
+                </a>
+                <a href="https://www.twitter.com/" target="blank">
+                    <img src="./images/twitter.png" width="15%" height="10%">
+                </a>
+            </td>
+            <td align="center" width="50%">
+                <p><b>Created by "404 Team Name Not Found", October 2022
+                    CSC317 Fall 2022</b></p>
+            </td>
+            <td align="right" width="25%">
+                <a href="https://www.facebook.com/" target="blank">
+                    <img src="./images/facebook.png" width="15%" height="10%">
+                </a>
+                <a href="https://www.youtube.com/" target="blank">
+                    <img src="./images/yt.png" width="15%" height="10%">
+                </a>
+            </td>
+        </tr>
+
+    </table>
+
+</footer>
+
+</html>
+FAQ.html
+10 KB

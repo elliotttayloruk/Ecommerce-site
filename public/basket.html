@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basket</title>
+
+  <style>
+    .Cart-Items{
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .Cart-Items > h1{
+      padding: 20px 0;
+    }
+
+    .image-box{
+      flex: 0.75;
+    }
+
+    .image-box{
+      display: flex;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border: 1px solid silver;
+    }
+
+    .image-box:hover{
+      border: none;
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      transform: scale(1.01);
+    }
+
+    .image-box > img{
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .image-box > img:hover{
+      transform: scale(1.04);
+    }
+
+    .about{
+      padding: 20px;
+      width: 100%;
+      position: relative;
+    }
+
+    .Title, .prices{
+      margin-bottom:
+              20px;
+    }
+
+    .prices {
+      padding: 20px;
+      width: 100%;
+    }
+
+    .remove:hover{
+      background-color: white;
+      color: darkred;
+      font-weight: 600;
+      border: 1px darkred;
+    }
+
+    .save:hover{
+      background-color: white;
+      color: green;
+      font-weight: 600;
+      border: 1px green;
+
+    }
+    .button:hover{
+      background-color: white;
+      color: green;
+      font-weight: 600;
+      border: 1px green;
+    }
+    .total{    flex: 0.25;
+      margin-left: 20px;
+      padding: 20px;
+      height: 240px;
+      border: 1px solid silver;
+      border-radius: 5px;
+    }
+    .total p{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to right, #ffefba, #ffffff);
+    }
+
+    /*NAVBAR CSS*/
+    .navbar {
+      width: 100%;
+      background-color: #555;
+      overflow: auto;
+    }
+
+    .navbar a {
+      float: left;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      width: 12.5%;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      /*changes the colour of the navbar buttons when you hover over them*/
+      background-color: #000;
+    }
+
+    .navbar a.active {
+      /*Highlights the page you are currently on in the navbar*/
+      background-color: mediumpurple;
+    }
+
+  </style>
+</head>
+<body background="../images/backg.jpeg">
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="screens.html">Protectors</a>
+  <a href="about.html">About</a>
+  <a href="FAQ.html">FAQ</a>
+  <a href="login.html">Login</a>
+  <a href="billing.html">Pay here</a>
+  <a class="active" href="basket3.html">Basket</a>
+</div>
+
+<h1>Shopping Cart</h1>
+
+<hr>
+
+<div class ="Cart-Items">
+  <div class="image-box">
+    <img src="../images/hammerprotectorclear.png" alt width="200" height="200"/>
+  </div>
+  <div class ="about">
+    <h1 class="Title">Screen Protector</h1>
+    <h3 class="Subtitle"> 4UCASES-Single</h3>
+  </div>
+  <div class ="counter"></div>
+  <div class ="prices"></div>
+
+</div>
+
+
+<div class ="counter">
+  <!--<button class="btn">+</button>
+  <div class="count">1</div>
+  <button class="btn">-</button> -->
+  <label for="quantity">Quantity</label>
+  <input type="number" id="quantity" name="quantity" min="1"><br>
+</div>
+
+<div class ="prices">
+  <h3 class="amount">$3.99</h3>
+  <button class="save"><u>Save For Later</u></button></div>
+<button class="remove"><u>Remove</u>
+</button>
+
+<hr>
+<div class ="Cart-Items">
+  <div class="image-box">
+    <img src="../images/privacyScreenClear.png" alt width="200" height="200"/>
+  </div>
+</div>
+<div class ="about">
+  <h1 class="Title">Privacy Screen Protector</h1>
+  <h3 class="Subtitle"> 4UCASES-Single </h3>
+
+  <div class ="counter">
+    <!--<button class="btn">+</button>
+    <div class="count">1</div>
+    <button class="btn">-</button> -->
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" min="1"><br>
+  </div>
+
+</div>
+
+<div class ="prices">
+  <h3 class="amount">$10.99</h3>
+  <button class="save"><u>Save For Later</u></button></div>
+<button class="remove"><u>Remove</u></button>
+
+<hr>
+<div class ="Cart-Items">
+  <div class="image-box">
+    <img src="../images/GlassProtectorClear.png" alt width="200" height="200"/>
+  </div>
+</div>
+<div class ="about">
+  <h1 class="Title">Glass Screen Protector</h1>
+  <h3 class="Subtitle"> 4UCASES-Single </h3>
+
+  <div class ="counter">
+    <!--<button class="btn">+</button>
+  <div class="count">1</div>
+  <button class="btn">-</button> -->
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" min="1"><br>
+  </div>
+
+</div>
+
+<div class ="prices">
+  <h3 class="amount">$8.99</h3>
+  <button class="save"><u>Save For Later</u></button></div>
+<button class="remove"><u>Remove</u>
+</button>
+
+<hr>
+<div class ="Cart-Items">
+  <div class="image-box">
+    <img src="../images/plasticClear.png" alt width="200" height="200"/>
+  </div>
+</div>
+<div class ="about">
+  <h1 class="Title">Plastic Screen Protector</h1>
+  <h3 class="Subtitle"> 4UCASES-Single </h3>
+
+  <div class ="counter">
+    <!--<button class="btn">+</button>
+    <div class="count">1</div>
+    <button class="btn">-</button> -->
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" min="1"><br>
+  </div>
+
+</div>
+
+<div class ="prices">
+  <h3 class="amount">$6.99</h3>
+  <button class="save"><u>Save For Later</u></button></div>
+<button class="remove"><u>Remove</u></button>
+
+<hr>
+<div class ="Cart-Items">
+  <div class="image-box">
+    <img src="../images/3packClear.png" alt width="200" height="200"/>
+  </div>
+</div>
+<div class ="about">
+  <h1 class="Title">Screen Protector</h1>
+  <h3 class="Subtitle"> 4UCASES-3Pack </h3>
+
+
+  <div class ="counter">
+    <!--<button class="btn">+</button>
+    <div class="count">1</div>
+    <button class="btn">-</button> -->
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" min="1"><br>
+  </div>
+
+</div>
+
+<div class ="prices">
+  <h3 class="amount">$9.99</h3>
+  <button class="save"><u>Save For Later</u></button></div>
+<button class="remove"><u>Remove</u></button>
+
+<hr>
+<div class="checkout">
+  <div class="total">
+    <div>
+      <h3 class="Subtotal">Sub-Total</h3>
+      <h3 class="items">5 items</h3>
+    </div>
+    <h3 class="total-amount">$39.95</h3>
+  </div>
+  <button class="button">Checkout</button>
+</div>
+<hr>
+</body>
+
+<footer>
+  <table width="100%">
+    <tr>
+      <td align="left" width="25%">
+        <a href="https://www.instagram.com/" target="blank">
+          <img src="../images/instagram.png" width="15%" height="10%">
+        </a>
+        <a href="https://www.twitter.com/" target="blank">
+          <img src="../images/twitter.png" width="15%" height="10%">
+        </a>
+      </td>
+      <td align="center" width="50%">
+        <p><b>Created by "404 Team Name Not Found", October 2022
+          CSC317 Fall 2022</b></p>
+      </td>
+      <td align="right" width="25%">
+        <a href="https://www.facebook.com/" target="blank">
+          <img src="../images/facebook.png" width="15%" height="10%">
+        </a>
+        <a href="https://www.youtube.com/" target="blank">
+          <img src="../images/yt.png" width="15%" height="10%">
+        </a>
+      </td>
+    </tr>
+
+  </table>
+
+</footer>
+</html>

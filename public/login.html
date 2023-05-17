@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="display.js" defer></script>
+    <title>Login</title>
+</head>
+
+<body background="../images/backg.jpeg">
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="screens.html">Protectors</a>
+    <a href="about.html">About</a>
+    <a href="FAQ.html">FAQ</a>
+    <a class="active" href="login.html">Login</a>
+    <a href="billing.html">Pay here</a>
+    <a id="basketNav" href="basket3.html">Basket</a>
+</div>
+
+    <h1 class="center">Login below</h1>
+    <h2 class="center">Haven't got an account? Register <a href="register.html"><em><u>here</u></em></a></h2>
+
+<div class="myContainer">
+
+    <form id ='login' action="/login-submit" method="POST">
+
+        <h3>Account login</h3>
+        <p>Required information is marked with an asterisk (*)</p><br>
+        <div class="signinfix">
+            <label for="username">Username (email)*:</label>
+            <input type="text" class="input" name ="username" id="username" required placeholder="Enter your Username"><br>
+
+            <label for= "password">Password*</label>
+            <input type="password" class="input" name ="password" id="password" required placeholder="Enter your Password"><br>
+        </div>
+
+        <input type="submit" class="button" value="Login">
+        <input type="reset" class= "button" value="Reset Form"><br><br>
+
+        <a class="hyperlink" href="register.html"> Don't have an account? Create an account here!</a><br>
+    </form><br>
+
+</div>
+
+<footer>
+    <table width="100%">
+        <tr>
+            <td align="left" width="25%">
+                <a href="https://www.instagram.com/" target="blank">
+                    <img src="../images/instagram.png" width="15%" height="10%">
+                </a>
+                <a href="https://www.twitter.com/" target="blank">
+                    <img src="../images/twitter.png" width="15%" height="10%">
+                </a>
+            </td>
+            <td align="center" width="50%">
+                <p><b>Created by "404 Team Name Not Found", October 2022
+                    CSC317 Fall 2022</b></p>
+            </td>
+            <td align="right" width="25%">
+                <a href="https://www.facebook.com/" target="blank">
+                    <img src="../images/facebook.png" width="15%" height="10%">
+                </a>
+                <a href="https://www.youtube.com/" target="blank">
+                    <img src="../images/yt.png" width="15%" height="10%">
+                </a>
+            </td>
+        </tr>
+
+    </table>
+
+</footer>
+
+</body>
+</html>
+

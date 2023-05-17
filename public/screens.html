@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Screens</title>
+    <script src="home.js" defer></script>
+    <script src="addBasket.js" defer></script>
+    <script src="display.js" defer></script>
+    <style>
+
+        body{
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(to right, #ffefba, #ffffff);
+        }
+
+    .Gold{
+        color: gold;
+    }
+
+    .Purple {
+        color: mediumpurple;
+    }
+
+    h1{
+        padding: 30px;
+    }
+
+    h2{
+        padding: 10px;
+    }
+
+    h3
+    {
+        font-size: 35px;
+    }
+
+    .indexIntro{
+        text-align: center;
+    }
+
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:3em;
+        width: 200px;
+        height: 100px;
+    }
+
+
+    /*NAVBAR CSS*/
+    .navbar {
+        width: 100%;
+        background-color: #555;
+        overflow: auto;
+    }
+
+    .navbar a {
+        float: left;
+        padding: 12px;
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        width: 12.5%;
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        /*changes the colour of the navbar buttons when you hover over them*/
+        background-color: #000;
+    }
+
+    .navbar a.active {
+        /*Highlights the page you are currently on in the navbar*/
+        background-color: mediumpurple;
+    }
+
+    /*Login and register box*/
+    .myContainer
+    {
+        width: 500px;
+        padding: 2.5rem;
+        margin: 50px 50px 50px 30%;
+        font-family: Helvetica;
+        font-size: 12px;
+        box-shadow: 0 0 75px
+        rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        background: lightgray;
+    }
+
+    /*Styles the input boxes on the login and register page*/
+    .input
+    {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px;
+        border-style: solid;
+        border-color: #dddddd;
+        outline: none;
+        background: #eeeeee;
+        transition: background 0.2s, border-color 0.2s;
+    }
+
+    /*Styles the buttons on the login/register pages*/
+    .button
+    {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        font-size: 0.75rem;
+        color: black;
+        border-style: solid;
+        border-color: #dddddd;
+        border-radius: 4px;
+        background: gray(50);
+    }
+
+
+    .hyperlink
+    {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Centers some texts on the pages*/
+    .center{
+        text-align: center;
+    }
+
+    /*PRODUCTS GRID CSS*/
+    /*Creates a grid for the case products on the home page*/
+    .productGrid {
+        display: grid;
+        grid-auto-columns: max-content;
+        grid-auto-flow: dense;
+        grid-auto-rows: minmax(100px, auto);
+        grid-gap: 25px;
+        text-align: center;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        margin: 60px auto;
+        max-width: 800px;
+    }
+
+    /*Adds a little zoom animation when you hover over an image of a case*/
+    .caseImage:hover{
+        transform:scale(1.1);
+    }
+
+    /*Adds an opaque grey box to the images of the cases so you can see each item better*/
+    .case{
+        /*background-color: grey;*/
+        background-color: rgba(0,0,0,.3);
+        border-radius: 20px;
+    }
+
+    /*Add to cart button on each of the cases*/
+    .addToCart{
+        margin:auto;
+        display:block;
+        padding:0.5em 1em 0.5em 1em;
+        border-radius:100px;
+        border:none;
+        position:relative;
+        background: mediumpurple;
+        cursor:pointer;
+        height:40px;
+        width:200px;
+        overflow:hidden;
+        transition:transform 0.1s;
+        z-index:1;
+    }
+
+    .addToCartSpecial{
+        margin:auto;
+        display:block;
+        padding:0.5em 1em 0.5em 1em;
+        border-radius:100px;
+        border:none;
+        position:relative;
+        background: #E6FF00;
+        cursor:pointer;
+        height:40px;
+        width:200px;
+        overflow:hidden;
+        transition:transform 0.1s;
+        z-index:1;
+    }
+
+    /*Zoom animation when you hover over the button*/
+    .addToCart:hover{
+        transform:scale(1.1);
+    }
+
+        .itemPopup{
+            width: 75%;
+            background: lightgrey;
+            border-radius: 50px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.1);
+            visibility: hidden;
+            padding: 0 30px 30px;
+            transition: transform 0.4s, top 0.4s;
+            font-size: 25px;
+        }
+        #popImg{
+            float: left;
+            width: 550px;
+            height: 500px;
+        }
+
+        .openPopup{
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .closePopup{
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0.1);
+        }
+
+    footer{
+        background-color: rgba(0,0,0,.3);
+    }
+    </style>
+</head>
+
+
+<body>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a class="active" href="screens.html">Protectors</a>
+    <a href="about.html">About</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="login.html">Login</a>
+    <a href="billing.html">Pay here</a>
+    <a id="basketNav" href="basket3.html">Basket</a>
+</div>
+<img id="logo" class="logo" src="../images/logoClear.png" alt="logo">
+
+<h2 class="indexIntro"></h2>
+
+<div class="itemPopup" id="itemPopup">
+    <img id="popImg"  src="" alt="Case image" width="325" height="300">
+    <br><br><br><br><br><h2 id="popH2"></h2>
+    <h3 id="popH3"><s style="color: red">$15</s>   Now $10</h3>
+    <label for="quantity">Quantity: </label>
+    <input type="number" id="quantity" name="quantity" min="1" value="1"><br><br>
+    <button onclick="closePopup()" class="addToCart">Back</button><br>
+    <!--<form action="/form-submit" method="POST">
+        <input type="submit" id="submit" class="addToCart" value="Add to Basket">
+    </form>-->
+    <button onclick="addToBasket()" class="addToCart">Add to basket</button>
+</div>
+
+<div class="productGrid">
+
+    <div>
+        <h2 class="Gold">Every phone needs a screen protector!</h2>
+    </div>
+
+    <div>
+        <h2>Choose Wisely or Choose All!</h2>
+    </div>
+
+    <div>
+        <h2 class="Purple">Find the perfect protector for you!</h2>
+    </div>
+
+    <div class="case">
+        <img onclick="itemPopup('s1')" class="caseImage" src="../images/privacyScreenClear.png" width="325" height="300">
+        <div class="product__price">
+            <p>$16.99
+        </div>
+        <div class="name">
+            <p>Privacy Protector</p>
+            <button onclick="itemPopup('s1')" id="s1" class="addToCart">Quick look</button>
+        </div>
+    </div>
+
+    <div class="case">
+        <img onclick="itemPopup('s2')" class="caseImage" src="../images/3packClear.png" width="325" height="300">
+        <div class="product__price">
+            <p>$24.99
+        </div>
+        <div class="name">
+            <p>Screen Protector (3 Pack)</p>
+            <button onclick="itemPopup('s2')" id="s2" class="addToCartSpecial">Quick look</button>
+        </div>
+    </div>
+
+    <div class="case">
+        <img onclick="itemPopup('s3')" class="caseImage" src="../images/GlassProtectorClear.png" width="325" height="300">
+        <div class="product__price">
+            <p>$14.99
+        </div>
+        <div class="name">
+            <p>Glass Protector</p>
+            <button onclick="itemPopup('s3')" id="s3" class="addToCart">Quick look</button>
+        </div>
+    </div>
+
+    <div class="case">
+        <img onclick="itemPopup('s4')" class="caseImage" src="../images/plasticClear.png" width="325" height="300">
+        <div class="product__price">
+            <p>$7.99
+        </div>
+        <div class="name">
+            <p>Plastic Protector</p>
+            <button onclick="itemPopup('s4')" id="s4" class="addToCart">Quick look</button>
+        </div>
+    </div>
+
+    <div class="case">
+        <img onclick="itemPopup('s5')" class="caseImage" src="../images/hammerprotectorclear.png" width="325" height="300">
+        <div class="product__price">
+            <p>$0.00
+        </div>
+        <div class="name">
+            <p>Place Holder Screen Protector</p>
+            <button onclick="itemPopup('s5')" id="s5" class="addToCart">Quick look</button>
+        </div>
+    </div>
+
+    <div class="case">
+        <img onclick="itemPopup('s6')" class="caseImage" src="../images/hammerprotectorclear.png" width="325" height="300">
+        <div class="product__price">
+            <p>$9.99
+        </div>
+        <div class="name">
+            <p>Screen Protector (Best Seller!)</p>
+            <button onclick="itemPopup('s6')" id="s6" class="addToCartSpecial">Quick look</button>
+        </div>
+    </div>
+
+
+</div>
+<br><br>
+<div>
+    <button onclick="backToTop()" class="addToCart">Back to top</button>
+</div>
+<br><br>
+
+<footer>
+    <table width="100%">
+        <tr>
+            <td align="left" width="25%">
+                <a href="https://www.instagram.com/" target="blank">
+                    <img src="../images/instagram.png" width="15%" height="10%">
+                </a>
+                <a href="https://www.twitter.com/" target="blank">
+                    <img src="../images/twitter.png" width="15%" height="10%">
+                </a>
+            </td>
+            <td align="center" width="50%">
+                <p><b>Created by "404 Team Name Not Found", October 2022
+                    CSC317 Fall 2022</b></p>
+            </td>
+            <td align="right" width="25%">
+                <a href="https://www.facebook.com/" target="blank">
+                    <img src="../images/facebook.png" width="15%" height="10%">
+                </a>
+                <a href="https://www.youtube.com/" target="blank">
+                    <img src="../images/yt.png" width="15%" height="10%">
+                </a>
+            </td>
+        </tr>
+
+    </table>
+
+</footer>
+
+</body>

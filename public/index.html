@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Home</title>
+  <script src="home.js" defer></script>
+  <script src="addBasket.js" defer></script>
+  <script src="display.js" defer></script>
+</head>
+
+<body>
+<div class="navbar">
+  <a class="active" href="index.html">Home</a>
+  <a href="screens.html">Protectors</a>
+  <a href="/about.html">About</a>
+  <a href="/FAQ.html">FAQ</a>
+  <a href="/login.html">Login</a>
+  <a href="/billing.html">Pay here</a>
+  <a id="basketNav" href="basket3.html">Basket</a>
+</div>
+<img id="logo" class="logo" src="./images/logoClear.png" alt="logo"><br><br>
+
+
+<h2 class="indexIntro">Find your perfect case from our range below!</h2>
+
+<div class="itemPopup" id="itemPopup">
+  <img id="popImg"  src="" alt="Case image" width="325" height="300">
+  <br><br><br><br><br><h2 id="popH2"></h2>
+  <h3 id="popH3">$10</h3>
+  <label for="quantity">Quantity: </label>
+  <input type="number" id="quantity" name="quantity" min="1" value="1"><br><br>
+  <button onclick="closePopup()" class="addToCart">Back</button><br>
+  <!--<form action="/form-submit" method="POST">
+      <input type="submit" id="submit" class="addToCart" value="Add to Basket">
+  </form>-->
+  <button onclick="addToBasket()" class="addToCart">Add to basket</button>
+</div>
+
+<div class="productGrid">
+  <div class="case">
+    <img onclick="itemPopup('b1')" class="caseImage" src="images/case2.png" alt="Case image" width="325" height="300">
+    <div class="product__price">
+      <p id="">$10.00
+    </div>
+    <div class="name">
+      <p id = "p1">Protector 1</p>
+      <button onclick="itemPopup('b1')" id="b1" class="addToCart">Quick look</button>
+    </div>
+  </div>
+
+
+  <div class="case">
+    <img onclick="itemPopup('b2')" class="caseImage" src="../images/duckCaseClear.png" alt="Case image" width="275" height="310">
+    <div class="prodPrice">
+      <p>$10.00
+    </div>
+    <div class="name">
+      <p id = "p2">Protector 2</p>
+      <button onclick="itemPopup('b2')" id="b2" class="addToCart">Quick look</button>
+    </div>
+  </div>
+
+
+  <div class="case">
+    <img onclick="itemPopup('b3')" class="caseImage" src="images/greenCaseClear.png" alt="Case image" width="325" height="320">
+    <div class="prodPrice">
+      <p>$10.00
+    </div>
+    <div class="name">
+      <p id = "p3">Protector 3</p>
+      <button onclick="itemPopup('b3')" id="b3" class="addToCart">Quick look</button>
+    </div>
+  </div>
+
+
+
+<div class="case">
+  <img onclick="itemPopup('b4')" class="caseImage" src="../images/dogCaseClear.png" alt="Case image" width="190" height="290">
+  <div class="prodPrice">
+    <p>$10.00
+  </div>
+  <div class="name">
+    <p id = "p4">Protector 4</p>
+    <button onclick="itemPopup('b4')" id="b4" class="addToCart">Quick look</button>
+  </div>
+</div>
+
+
+  <div class="case">
+    <img onclick="itemPopup('b5')" class="caseImage" src="../images/case2.png" alt="Case image" width="325" height="300">
+    <div class="prodPrice">
+      <p>$10.00
+    </div>
+    <div class="name">
+      <p id = "p5">Protector 5</p>
+      <button onclick="itemPopup('b5')" id="b5" class="addToCart">Quick look</button>
+    </div>
+  </div>
+
+
+  <div class="case">
+    <img onclick="itemPopup('b6')" class="caseImage" src="../images/dogCase2clear.png" alt="Case image" width="325" height="300">
+    <div class="prodPrice">
+      <p>$10.00
+    </div>
+    <div class="name">
+      <p id = "p6">Protector 6</p>
+      <button onclick="itemPopup('b6')" id="b6" class="addToCart">Quick look</button>
+    </div>
+  </div>
+
+
+  <div class="case">
+    <img onclick="itemPopup('b7')" class="caseImage" src="../images/case2.png" alt="Case image" width="325" height="300">
+    <div class="prodPrice">
+      <p>$10.00
+    </div>
+    <div class="name">
+      <p id = "p7">Protector 7</p>
+      <button onclick="itemPopup('b7')"id="b7" class="addToCart">Quick look</button>
+    </div>
+  </div>
+
+
+  <div class="case">
+    <img onclick="itemPopup('b8')" class="caseImage" src="../images/case2.png" alt="Case image" width="325" height="300">
+    <div class="prodPrice">
+      <p>$10.00
+    </div>
+    <div class="name">
+      <p id = "p8">Protector 8</p>
+      <button onclick="itemPopup('b8')" id="b8" class="addToCart">Quick look</button>
+    </div>
+  </div>
+
+
+<div class="case">
+  <img onclick="itemPopup('b9')" class="caseImage" src="../images/case2.png" alt="Case image" width="325" height="300">
+  <div class="prodPrice">
+    <p>$10.00
+  </div>
+  <div class="name">
+    <p id = "p9">Protector 9</p>
+    <button onclick="itemPopup('b9')" id="b9" class="addToCart">Quick look</button>
+  </div>
+</div>
+</div>
+<br><br>
+<div>
+  <button onclick="backToTop()" class="addToCart">Back to top</button>
+</div>
+<br><br>
+
+</body>
+
+
+<footer>
+  <table width="100%">
+    <tr>
+      <td align="left" width="25%">
+        <a href="https://www.instagram.com/" target="blank">
+          <img src="../images/instagram.png" width="15%" height="10%">
+        </a>
+        <a href="https://www.twitter.com/" target="blank">
+          <img src="../images/twitter.png" width="15%" height="10%">
+        </a>
+      </td>
+      <td align="center" width="50%">
+        <p><b>Created by "404 Team Name Not Found", October 2022
+          CSC317 Fall 2022</b></p>
+      </td>
+      <td align="right" width="25%">
+        <a href="https://www.facebook.com/" target="blank">
+          <img src="../images/facebook.png" width="15%" height="10%">
+        </a>
+        <a href="https://www.youtube.com/" target="blank">
+          <img src="../images/yt.png" width="15%" height="10%">
+        </a>
+      </td>
+    </tr>
+
+  </table>
+
+</footer>
+</html>
